@@ -1,11 +1,11 @@
 # MathJax-Rails
 
-We are living in an age, where displaying math on web pages is never hard, thanks to the great work of [MathJax](https://github.com/mathjax/MathJax). 
+We are living in an age, where displaying math on web pages is never hard, thanks to the great work of [MathJax](https://github.com/mathjax/MathJax).
 
 To quote the description from its official website,
 
   > [MathJax](https://github.com/mathjax/MathJax) is an open source JavaScript display engine for mathematics that works in all modern browsers.
-  > 
+  >
   > No more setup for readers. No more browser plugins. No more font installations… It just works.
 
 ## Why bother another gem?
@@ -32,8 +32,8 @@ To see the actual version, check the constant Mathjax::Rails::MATHJAXVERSION.
 
 add this line to your Gemfile
 
-	gem 'mathjax-rails'
-  
+	gem 'mathjax-rails', :git => 'git://github.com/itsgg/mathjax-rails.git'
+
 then
 
 	$ bundle install
@@ -47,7 +47,7 @@ add the script tag inside app/views/layouts/application.html.erb
 
 ``` rhtml
 <%= mathjax_tag %>
-```  
+```
 and it is done!
 
 To try it, write a simple formula, for example,
@@ -96,7 +96,7 @@ If you have a fast CDN service at hand, you don't need this gem.
 
 Putting your MathJax at CDN is probably the best choice.
 
-By `dmarczal`, 
+By `dmarczal`,
 
 To work in rails 3.1 on production environment wih ngnix I just comment the follow line in production.rb
 
@@ -105,9 +105,9 @@ To work in rails 3.1 on production environment wih ngnix I just comment the foll
 #config.action_dispatch.x_sendfile_header = "X-Sendfile"
 ```
 
-
-
 ## ChangeLog
+* 2013.6.1
+Update MathJax to 2.2
 
 * 2011.7.28
 Version 0.0.2 used to fail on Heroku. Now the problem is fixed. I used to use `send_file` without content_type, which causes a failure when deployed to Heroku. Now in version 0.0.3 I use `render :type=>...,` with the appropriate content-type set and the problem is solved.
