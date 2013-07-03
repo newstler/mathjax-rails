@@ -1,5 +1,3 @@
 require 'mathjax/rails/helpers'
-require 'mathjax/rails/routes'
-require 'mathjax/rails/controllers'
 require 'mathjax/rails/mime_types'
 require 'mathjax/rails/version'
