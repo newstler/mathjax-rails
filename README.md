@@ -38,11 +38,6 @@ then
 
 	$ bundle install
 
-add the following to config/routes.rb (you can change the name of course)
-
-``` ruby
-mathjax 'mathjax'
-```
 add the script tag inside app/views/layouts/application.html.erb
 
 ``` rhtml
@@ -86,9 +81,7 @@ For more options please consult the MathJax documentation.
 
 ## What did it do to my rails project
 
-Three simple things: it adds 1 controller `MathjaxRailsController`; 1 helper method `mathjax_tag`; 1 router method `mathjax`.
-
-It won't pollute your rails project more than the above three.
+One thing: 1 helper method `mathjax_tag`.
 
 ## Note
 
@@ -106,6 +99,9 @@ To work in rails 3.1 on production environment wih ngnix I just comment the foll
 ```
 
 ## ChangeLog
+* 2013.7.3
+Convert to Rails Engine.
+
 * 2013.6.1
 Update MathJax to 2.2
 
