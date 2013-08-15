@@ -1,5 +1,7 @@
 # MathJax-Rails
 
+Use if you want headjs style loading
+
 We are living in an age, where displaying math on web pages is never hard, thanks to the great work of [MathJax](https://github.com/mathjax/MathJax).
 
 To quote the description from its official website,
@@ -99,6 +101,9 @@ To work in rails 3.1 on production environment wih ngnix I just comment the foll
 ```
 
 ## ChangeLog
+* 2013.8.15
+Changed to use headjs by default and load mml and latex
+
 * 2013.7.3
 Convert to Rails Engine.
 
