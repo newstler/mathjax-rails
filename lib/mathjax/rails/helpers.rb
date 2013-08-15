@@ -5,10 +5,10 @@ module Mathjax
         if false==opt[:config]
           additional = ''
         else
-          opt[:config] = 'TeX-AMS_HTML-full.js' if !opt[:config]
+          opt[:config] = 'TeX-AMS-MML_HTMLorMML.js' if !opt[:config]
           additional = "?config=#{opt[:config]}"
         end
-      	"<script src=\"#{mathjax_path(:uri=>'MathJax.js')}#{additional}\" type=\"text/javascript\"></script>".html_safe
+      	"head.js(\"#{mathjax_path(:uri=>'MathJax.js')}#{additional}\" )".html_safe
       end
     end
   end
