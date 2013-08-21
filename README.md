@@ -1,6 +1,6 @@
 # MathJax-Rails
 
-Use if you want headjs style loading
+# Use if you want to use with headjs
 
 We are living in an age, where displaying math on web pages is never hard, thanks to the great work of [MathJax](https://github.com/mathjax/MathJax).
 
@@ -34,7 +34,7 @@ To see the actual version, check the constant Mathjax::Rails::MATHJAXVERSION.
 
 add this line to your Gemfile
 
-	gem 'mathjax-rails', :git => 'git://github.com/itsgg/mathjax-rails.git'
+	gem 'mathjax-rails', :git => 'git://github.com/mikey0000/mathjax-rails.git'
 
 then
 
@@ -77,6 +77,17 @@ Additional configuration can be added directly before mathjax_tag, for example:
 	});
 </script>
 <%= mathjax_tag %>
+//slightly more useful config
+<script type="text/x-mathjax-config">
+
+MathJax.Hub.Config({
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    "HTML-CSS": {
+        showMathMenu: false,
+        mtextFontInherit: true
+    }
+});
 ```
 
 For more options please consult the MathJax documentation.

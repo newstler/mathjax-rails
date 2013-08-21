@@ -8,7 +8,7 @@ module Mathjax
           opt[:config] = 'TeX-AMS-MML_HTMLorMML.js' if !opt[:config]
           additional = "?config=#{opt[:config]}"
         end
-      	"head.js(\"#{:uri=>'MathJax.js'}#{additional}\" )".html_safe
+      	"<script type=\"text/javascript\">head.js(\"#{mathjax_path(:uri=>'MathJax.js')}#{additional}\" );</script>".html_safe
       end
     end
   end
