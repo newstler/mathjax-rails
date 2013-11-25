@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = ">= 1.3.6"
   #s.rubyforge_project         = "mathjax-rails"
 
-  s.add_dependency 'rails', '~> 3.2'
+  s.add_dependency 'rails', '> 3.2'
 
   s.files        = `git ls-files`.split("\n")
   s.executables  = `git ls-files`.split("\n").select{|f| f =~ /^bin/}
